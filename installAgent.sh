@@ -11,6 +11,4 @@ curl -X GET "http://attachservice.com/computeMetadata/v1/instance/service-accoun
 echo "\n\n Check if agent is installed or not\n" >> $HOME/scriptExecutionLogs.log
 if (apt list --installed | grep stackdriver); then echo "stackdriver-agent INSTALLED" >> $HOME/scriptExecutionLogs.log && exit 100; else echo "stackdriver-agent NOT INSTALLED" >> $HOME/scriptExecutionLogs.log && exit 101; fi
 
-service stackdriver-agent start
-
 exit 100
